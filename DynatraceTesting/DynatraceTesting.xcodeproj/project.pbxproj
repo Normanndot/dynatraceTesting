@@ -12,6 +12,7 @@
 		A309D77C2976D2A6003ED59E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A309D77A2976D2A6003ED59E /* Main.storyboard */; };
 		A309D77E2976D2A7003ED59E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A309D77D2976D2A7003ED59E /* Assets.xcassets */; };
 		A309D7812976D2A7003ED59E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A309D77F2976D2A7003ED59E /* LaunchScreen.storyboard */; };
+		A309D7892976D86F003ED59E /* Dynatrace in Frameworks */ = {isa = PBXBuildFile; productRef = A309D7882976D86F003ED59E /* Dynatrace */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A309D7892976D86F003ED59E /* Dynatrace in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +80,9 @@
 			dependencies = (
 			);
 			name = DynatraceTesting;
+			packageProductDependencies = (
+				A309D7882976D86F003ED59E /* Dynatrace */,
+			);
 			productName = DynatraceTesting;
 			productReference = A309D7732976D2A6003ED59E /* DynatraceTesting.app */;
 			productType = "com.apple.product-type.application";
@@ -106,6 +111,9 @@
 				Base,
 			);
 			mainGroup = A309D76A2976D2A6003ED59E;
+			packageReferences = (
+				A309D7872976D86F003ED59E /* XCRemoteSwiftPackageReference "swift-mobile-sdk" */,
+			);
 			productRefGroup = A309D7742976D2A6003ED59E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -346,6 +354,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A309D7872976D86F003ED59E /* XCRemoteSwiftPackageReference "swift-mobile-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Dynatrace/swift-mobile-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 8.257.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A309D7882976D86F003ED59E /* Dynatrace */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A309D7872976D86F003ED59E /* XCRemoteSwiftPackageReference "swift-mobile-sdk" */;
+			productName = Dynatrace;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A309D76B2976D2A6003ED59E /* Project object */;
 }
